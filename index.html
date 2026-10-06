@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>درس‌یار | آموزش پایه سوم تا هفتم</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        📚 درس‌یار
+    </div>
+
+    <nav>
+        <button onclick="goHome()">خانه</button>
+        <button onclick="showAllGrades()">کلاس‌ها</button>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- خانه -->
+
+    <section id="homePage" class="page">
+
+        <div class="hero">
+
+            <div>
+
+                <span class="badge">
+                    🎓 آموزش هوشمند
+                </span>
+
+                <h1>
+                    درس‌یار
+                </h1>
+
+                <p>
+                    آموزش ویدیویی و درس‌به‌درس پایه‌های سوم تا هفتم
+                </p>
+
+                <div class="searchBox">
+
+                    <input
+                        id="mainSearch"
+                        type="text"
+                        placeholder="مثلاً: صفحه ۴۴ ریاضی ششم"
+                        onkeydown="if(event.key === 'Enter') searchLessons()"
+                    >
+
+                    <button onclick="searchLessons()">
+                        🔎 جستجو
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sectionTitle">
+
+            <h2>
+                پایه تحصیلی
+            </h2>
+
+            <p>
+                کلاس خودت را انتخاب کن
+            </p>
+
+        </div>
+
+
+        <div
+            id="gradeGrid"
+            class="gradeGrid">
+        </div>
+
+    </section>
+
+
+    <!-- پایه -->
+
+    <section
+        id="gradePage"
+        class="page hidden">
+
+        <button
+            class="backButton"
+            onclick="goHome()">
+            ← برگشت
+        </button>
+
+        <div id="gradeHeader"></div>
+
+        <div
+            id="subjectGrid"
+            class="subjectGrid">
+        </div>
+
+    </section>
+
+
+    <!-- درس -->
+
+    <section
+        id="subjectPage"
+        class="page hidden">
+
+        <button
+            class="backButton"
+            onclick="backToGrade()">
+            ← برگشت
+        </button>
+
+        <div id="subjectHeader"></div>
+
+        <div
+            id="chapterGrid"
+            class="chapterGrid">
+        </div>
+
+    </section>
+
+
+    <!-- فصل -->
+
+    <section
+        id="chapterPage"
+        class="page hidden">
+
+        <button
+            class="backButton"
+            onclick="backToSubject()">
+            ← برگشت
+        </button>
+
+        <div id="chapterHeader"></div>
+
+        <div
+            id="lessonGrid"
+            class="lessonGrid">
+        </div>
+
+    </section>
+
+
+    <!-- صفحه -->
+
+    <section
+        id="lessonPage"
+        class="page hidden">
+
+        <button
+            class="backButton"
+            onclick="backToChapter()">
+            ← برگشت
+        </button>
+
+        <article id="lessonContent"></article>
+
+    </section>
+
+
+    <!-- جستجو -->
+
+    <section
+        id="searchPage"
+        class="page hidden">
+
+        <button
+            class="backButton"
+            onclick="goHome()">
+            ← برگشت
+        </button>
+
+        <div class="pageHeader">
+
+            <h1>
+                🔎 نتایج جستجو
+            </h1>
+
+            <p>
+                نتیجه‌های مرتبط با جستجوی تو
+            </p>
+
+        </div>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <h3>
+        📚 درس‌یار
+    </h3>
+
+    <p>
+        آموزش ساده، سریع و درس‌به‌درس
+    </p>
+
+    <p>
+        پایه سوم تا هفتم
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
